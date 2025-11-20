@@ -21,25 +21,40 @@ export function ServicesPage() {
                 </div>
             </div>
 
-            <div className="space-y-4">
-                {services.map(service => (
-                    <Card key={service.id} className="hover:shadow-md transition-shadow">
-                        <CardContent className="p-5 flex justify-between items-center">
-                            <div>
-                                <CardTitle className="text-lg">{service.name}</CardTitle>
-                                <CardDescription>{service.desc}</CardDescription>
-                            </div>
-                            <div className="text-right flex flex-col items-end gap-2">
-                                <div className="font-bold text-amber-500 text-lg">₹{service.price}</div>
-                                <Button
-                                    onClick={() => handleBook(service.name)}
-                                    size="sm"
-                                >
-                                    Book
-                                </Button>
-                            </div>
-                        </CardContent>
-                    </Card>
+            <div className="space-y-8">
+                {Object.entries(
+                    services.reduce((acc, service) => {
+                        const category = service.category || "Other";
+                        if (!acc[category]) acc[category] = [];
+                        acc[category].push(service);
+                        return acc;
+                    }, {} as Record<string, typeof services>)
+                ).map(([category, categoryServices]) => (
+                    <div key={category}>
+                        <h2 className="text-lg font-semibold text-primary mb-3 border-b border-border/50 pb-1">{category}</h2>
+                        <div className="space-y-3">
+                            {categoryServices.map(service => (
+                                <Card key={service.id} className="hover:shadow-md transition-shadow">
+                                    <CardContent className="p-4 flex justify-between items-center">
+                                        <div>
+                                            <CardTitle className="text-base">{service.name}</CardTitle>
+                                            <CardDescription className="text-xs">{service.desc}</CardDescription>
+                                        </div>
+                                        <div className="text-right flex flex-col items-end gap-1">
+                                            <div className="font-bold text-amber-500 text-base">₹{service.price}</div>
+                                            <Button
+                                                onClick={() => handleBook(service.name)}
+                                                size="sm"
+                                                className="h-8 text-xs"
+                                            >
+                                                Book
+                                            </Button>
+                                        </div>
+                                    </CardContent>
+                                </Card>
+                            ))}
+                        </div>
+                    </div>
                 ))}
             </div>
 

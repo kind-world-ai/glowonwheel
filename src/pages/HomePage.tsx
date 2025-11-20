@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { Sparkles, Plus, ShoppingBag, Scissors, ArrowRight } from 'lucide-react';
+import { Sparkles, Plus, ShoppingBag, Scissors, ArrowRight, Brush, Palette, Gem, Footprints, Sun } from 'lucide-react';
 import { products, services } from '../data';
 import { useOutletContext, useNavigate } from 'react-router-dom';
 import confetti from 'canvas-confetti';
@@ -26,6 +26,18 @@ const container = {
 const item = {
     hidden: { opacity: 0, y: 20 },
     show: { opacity: 1, y: 0 }
+};
+
+const getServiceIcon = (category: string, name: string) => {
+    if (name.toLowerCase().includes('makeup')) return <Brush size={24} className="text-primary" />;
+    if (name.toLowerCase().includes('mehendi')) return <Palette size={24} className="text-primary" />;
+    if (name.toLowerCase().includes('saree')) return <Gem size={24} className="text-primary" />;
+    if (name.toLowerCase().includes('hair')) return <Scissors size={24} className="text-primary" />;
+    if (name.toLowerCase().includes('waxing')) return <Sparkles size={24} className="text-primary" />;
+    if (name.toLowerCase().includes('facial')) return <Sparkles size={24} className="text-primary" />;
+    if (name.toLowerCase().includes('bleach')) return <Sun size={24} className="text-primary" />;
+    if (name.toLowerCase().includes('pedicure') || name.toLowerCase().includes('manicure')) return <Footprints size={24} className="text-primary" />;
+    return <Scissors size={24} className="text-primary" />;
 };
 
 export function HomePage() {
@@ -55,7 +67,7 @@ export function HomePage() {
     };
 
     const essentialProducts = products.filter(p => p.category === 'Essentials');
-    const featuredServices = services.slice(0, 3); // Show first 3 services
+    const featuredServices = services.slice(0, 4); // Show first 4 services
 
     return (
         <div className="pb-24 bg-background text-foreground min-h-screen transition-colors duration-300">
@@ -131,10 +143,10 @@ export function HomePage() {
                                                     <p className="text-2xl font-bold text-amber-500">₹{product.price}</p>
                                                 </div>
                                                 <Button
-                                                    className="w-full"
+                                                    className="w-full h-11 text-base shadow-md hover:shadow-lg transition-all active:scale-95"
                                                     onClick={(e) => handleAdd(product.id, e)}
                                                 >
-                                                    <Plus size={16} className="mr-2" />
+                                                    <Plus size={18} className="mr-2" />
                                                     Add to Cart
                                                 </Button>
                                             </div>
@@ -148,10 +160,10 @@ export function HomePage() {
             </div>
 
             {/* Featured Salon Services */}
-            <div className="py-8 px-4 bg-gradient-to-b from-secondary/20 to-background">
+            <div className="py-8 px-4 bg-gradient-to-b from-primary/5 to-background">
                 <div className="flex justify-between items-center mb-6">
                     <h2 className="font-bold text-xl text-foreground flex items-center gap-2">
-                        <Scissors size={20} className="text-purple-500" />
+                        <Scissors size={20} className="text-primary" />
                         Home Salon Services
                     </h2>
                     <Button
@@ -167,21 +179,21 @@ export function HomePage() {
 
                 <div className="space-y-4">
                     {featuredServices.map((service) => (
-                        <Card key={service.id} className="overflow-hidden hover:shadow-md transition-shadow">
+                        <Card key={service.id} className="overflow-hidden hover:shadow-md transition-shadow border-primary/20">
                             <CardContent className="p-4 flex items-center gap-4">
-                                <div className="w-16 h-16 rounded-full bg-gradient-to-br from-purple-500/20 to-pink-500/20 flex items-center justify-center flex-shrink-0 border border-border">
-                                    <Scissors size={24} className="text-purple-500" />
+                                <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0 border border-primary/20">
+                                    {getServiceIcon(service.category || '', service.name)}
                                 </div>
                                 <div className="flex-1">
                                     <h3 className="font-bold text-card-foreground">{service.name}</h3>
                                     <p className="text-sm text-muted-foreground line-clamp-1">{service.desc}</p>
-                                    <p className="text-lg font-bold text-amber-500 mt-1">₹{service.price}</p>
+                                    <p className="text-lg font-bold text-amber-600 mt-1">₹{service.price}</p>
                                 </div>
                                 <Button
-                                    size="sm"
                                     onClick={() => handleBookService(service.name)}
+                                    className="bg-primary hover:bg-primary/90 text-primary-foreground h-10 px-6 shadow-sm active:scale-95 transition-transform"
                                 >
-                                    Book Now
+                                    Book
                                 </Button>
                             </CardContent>
                         </Card>
@@ -223,6 +235,7 @@ export function HomePage() {
                                         <Button
                                             size="sm"
                                             variant="secondary"
+                                            className="h-9 px-4 active:scale-95 transition-transform"
                                             onClick={(e) => handleAdd(product.id, e)}
                                         >
                                             Add

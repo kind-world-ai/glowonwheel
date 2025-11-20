@@ -34,115 +34,113 @@
     line-height: 1.5;
     font-weight: 400;
 
-    /* Light Mode: Pale Glow bg, Deep Cocoa text */
-    --background: 38 64% 93%;
-    /* #FAEFDE */
-    --foreground: 16 32% 27%;
-    /* #5A3A2E */
+    /* Light Mode: Warm White bg, Dark Forest Olive text */
+    --background: 45 20% 99%;
+    /* #FCFCFA */
+    --foreground: 80 30% 12%;
+    /* #15190D */
 
     --card: 0 0% 100%;
     /* White cards for contrast */
-    --card-foreground: 16 32% 27%;
+    --card-foreground: 80 30% 12%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 16 32% 27%;
+    --popover-foreground: 80 30% 12%;
 
-    --primary: 10 60% 59%;
-    /* Glow Coral #D76A55 */
-    --primary-foreground: 38 64% 93%;
-    /* Pale Glow */
+    --primary: 85 40% 35%;
+    /* Rich Earthy Olive #4B5E23 */
+    --primary-foreground: 45 20% 99%;
+    /* Warm White */
 
-    --secondary: 38 83% 72%;
-    /* Vanity Gold #F4C87A */
-    --secondary-foreground: 16 32% 27%;
+    --secondary: 45 85% 60%;
+    /* Golden Honey #F0C441 */
+    --secondary-foreground: 80 30% 12%;
 
-    --muted: 39 57% 87%;
-    /* Soft Cream #F3E4C8 */
-    --muted-foreground: 14 34% 36%;
-    /* Dusty Brown #7B4B3C */
+    --muted: 80 10% 92%;
+    /* Sage Grey #E8EAE6 */
+    --muted-foreground: 80 20% 40%;
+    /* Muted Olive */
 
-    --accent: 38 83% 72%;
-    /* Vanity Gold */
-    --accent-foreground: 16 32% 27%;
+    --accent: 45 85% 60%;
+    /* Golden Honey */
+    --accent-foreground: 80 30% 12%;
 
     --destructive: 0 84% 60%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 14 34% 36%;
-    /* Dusty Brown */
-    --input: 14 34% 36%;
-    --ring: 10 60% 59%;
-    /* Glow Coral */
+    --border: 80 20% 85%;
+    /* Light Sage Border */
+    --input: 80 20% 85%;
+    --ring: 85 40% 35%;
+    /* Rich Earthy Olive */
 
     --radius: 0.625rem;
 
-    --chart-1: 10 60% 59%;
-    --chart-2: 38 83% 72%;
-    --chart-3: 16 32% 27%;
-    --chart-4: 17 60% 73%;
-    --chart-5: 11 54% 53%;
+    --chart-1: 85 40% 35%;
+    --chart-2: 45 85% 60%;
+    --chart-3: 80 30% 12%;
+    --chart-4: 73 29% 48%;
+    --chart-5: 51 100% 50%;
 
-    --sidebar: 38 64% 93%;
-    --sidebar-foreground: 16 32% 27%;
-    --sidebar-primary: 10 60% 59%;
-    --sidebar-primary-foreground: 38 64% 93%;
-    --sidebar-accent: 39 57% 87%;
-    --sidebar-accent-foreground: 16 32% 27%;
-    --sidebar-border: 14 34% 36%;
-    --sidebar-ring: 10 60% 59%;
+    --sidebar: 45 20% 99%;
+    --sidebar-foreground: 80 30% 12%;
+    --sidebar-primary: 85 40% 35%;
+    --sidebar-primary-foreground: 45 20% 99%;
+    --sidebar-accent: 80 10% 92%;
+    --sidebar-accent-foreground: 80 30% 12%;
+    --sidebar-border: 80 20% 85%;
+    --sidebar-ring: 85 40% 35%;
 }
 
 .dark {
-    /* Dark Mode: Deep Cocoa bg, Soft Cream text */
-    --background: 16 32% 27%;
-    /* #5A3A2E */
-    --foreground: 39 57% 87%;
-    /* #F3E4C8 */
+    /* Dark Mode: Deep Dark Olive bg, Cream text */
+    --background: 72 37% 8%;
+    /* #1A1F0D */
+    --foreground: 48 33% 96%;
+    /* #F9F7F0 */
 
-    --card: 14 34% 36%;
-    /* Dusty Brown #7B4B3C */
-    --card-foreground: 39 57% 87%;
+    --card: 70 36% 15%;
+    /* Dark Olive */
+    --card-foreground: 48 33% 96%;
 
-    --popover: 14 34% 36%;
-    --popover-foreground: 39 57% 87%;
+    --popover: 70 36% 15%;
+    --popover-foreground: 48 33% 96%;
 
-    --primary: 38 83% 72%;
-    /* Vanity Gold #F4C87A */
-    --primary-foreground: 16 32% 27%;
+    --primary: 73 29% 48%;
+    /* Light Olive #6B8E23 */
+    --primary-foreground: 48 33% 96%;
 
-    --secondary: 11 54% 53%;
-    /* Warm Clay #C45E48 */
-    --secondary-foreground: 39 57% 87%;
+    --secondary: 51 100% 50%;
+    /* Bright Mustard #FFD700 */
+    --secondary-foreground: 70 36% 15%;
 
-    --muted: 14 34% 36%;
-    --muted-foreground: 17 60% 73%;
-    /* Rose Beige #E5A890 */
+    --muted: 70 36% 20%;
+    --muted-foreground: 70 20% 60%;
 
-    --accent: 11 54% 53%;
-    --accent-foreground: 39 57% 87%;
+    --accent: 51 100% 50%;
+    --accent-foreground: 70 36% 15%;
 
     --destructive: 0 62% 30%;
-    --destructive-foreground: 39 57% 87%;
+    --destructive-foreground: 48 33% 96%;
 
-    --border: 39 57% 87%;
-    /* Soft Cream */
-    --input: 39 57% 87%;
-    --ring: 38 83% 72%;
+    --border: 70 36% 20%;
+    --input: 70 36% 20%;
+    --ring: 73 29% 48%;
 
-    --chart-1: 38 83% 72%;
-    --chart-2: 10 60% 59%;
-    --chart-3: 39 57% 87%;
-    --chart-4: 17 60% 73%;
-    --chart-5: 11 54% 53%;
+    --chart-1: 51 100% 50%;
+    --chart-2: 73 29% 48%;
+    --chart-3: 48 33% 96%;
+    --chart-4: 70 20% 60%;
+    --chart-5: 76 41% 35%;
 
-    --sidebar: 16 32% 27%;
-    --sidebar-foreground: 39 57% 87%;
-    --sidebar-primary: 38 83% 72%;
-    --sidebar-primary-foreground: 16 32% 27%;
-    --sidebar-accent: 14 34% 36%;
-    --sidebar-accent-foreground: 39 57% 87%;
-    --sidebar-border: 39 57% 87%;
-    --sidebar-ring: 38 83% 72%;
+    --sidebar: 70 36% 15%;
+    --sidebar-foreground: 48 33% 96%;
+    --sidebar-primary: 73 29% 48%;
+    --sidebar-primary-foreground: 48 33% 96%;
+    --sidebar-accent: 70 36% 20%;
+    --sidebar-accent-foreground: 48 33% 96%;
+    --sidebar-border: 70 36% 20%;
+    --sidebar-ring: 73 29% 48%;
 }
 
 body {
