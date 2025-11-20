@@ -28,7 +28,7 @@ const item = {
     show: { opacity: 1, y: 0 }
 };
 
-const getServiceIcon = (category: string, name: string) => {
+const getServiceIcon = (name: string) => {
     if (name.toLowerCase().includes('makeup')) return <Brush size={24} className="text-primary" />;
     if (name.toLowerCase().includes('mehendi')) return <Palette size={24} className="text-primary" />;
     if (name.toLowerCase().includes('saree')) return <Gem size={24} className="text-primary" />;
@@ -182,7 +182,7 @@ export function HomePage() {
                         <Card key={service.id} className="overflow-hidden hover:shadow-md transition-shadow border-primary/20">
                             <CardContent className="p-4 flex items-center gap-4">
                                 <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0 border border-primary/20">
-                                    {getServiceIcon(service.category || '', service.name)}
+                                    {getServiceIcon(service.name)}
                                 </div>
                                 <div className="flex-1">
                                     <h3 className="font-bold text-card-foreground">{service.name}</h3>
