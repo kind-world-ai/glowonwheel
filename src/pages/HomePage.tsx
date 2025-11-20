@@ -62,7 +62,11 @@ export function HomePage() {
     };
 
     const handleBookService = (serviceName: string) => {
-        const message = `Hi! I want to book an appointment for: ${serviceName}`;
+        const service = services.find(s => s.name === serviceName);
+        const price = service ? service.price : 0;
+        const visitNote = price < 499 ? "%0A(Note: +₹99 Visiting Charge for orders < ₹499)" : "%0A(Free Visiting Charge applied!)";
+
+        const message = `Hi! I want to book the service: ${serviceName}${visitNote}`;
         window.open(`https://wa.me/918437085459?text=${message}`, '_blank');
     };
 
@@ -123,6 +127,21 @@ export function HomePage() {
                         <p className="font-bold text-amber-600">5:00 PM Onwards</p>
                     </div>
                 </div>
+
+                {/* Free Visit Banner */}
+                <motion.div
+                    initial={{ opacity: 0, scale: 0.9 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    transition={{ delay: 0.4 }}
+                    className="mt-6 bg-gradient-to-r from-primary/20 to-secondary/20 p-3 rounded-xl border border-primary/20 text-center"
+                >
+                    <p className="text-sm font-bold text-primary">
+                        ✨ Free Home Visit on orders above ₹499!
+                    </p>
+                    <p className="text-xs text-muted-foreground mt-1">
+                        (₹99 visiting charge for smaller orders)
+                    </p>
+                </motion.div>
             </div>
 
             {/* Daily Steals - Product Slider */}

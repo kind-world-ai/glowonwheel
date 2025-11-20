@@ -15,13 +15,17 @@ export function Layout({ cart, addToCart }: LayoutProps) {
         return sum + (product ? product.price * item.qty : 0);
     }, 0);
 
+    const visitCharge = totalAmount >= 499 ? 0 : 99;
+    const finalTotal = totalAmount + visitCharge;
+
     const handleCheckout = () => {
         const itemsList = cart.map(item => {
             const product = products.find(p => p.id === item.id);
             return `${product?.name} x${item.qty}`;
         }).join('%0A');
 
-        const message = `Hi! I want to reserve:%0A${itemsList}%0ATotal: ₹${totalAmount}`;
+        const chargeText = visitCharge === 0 ? "FREE" : `₹${visitCharge}`;
+        const message = `Hi! I want to reserve:%0A${itemsList}%0A----------------%0ASubtotal: ₹${totalAmount}%0AVisit Charge: ${chargeText}%0A----------------%0ATotal: ₹${finalTotal}`;
         window.open(`https://wa.me/918437085459?text=${message}`, '_blank');
     };
 
@@ -32,7 +36,8 @@ export function Layout({ cart, addToCart }: LayoutProps) {
             <Outlet context={{ addToCart }} />
             <WhatsAppButton
                 cartCount={cart.reduce((a, b) => a + b.qty, 0)}
-                totalAmount={totalAmount}
+                totalAmount={finalTotal}
+                visitCharge={visitCharge}
                 onCheckout={handleCheckout}
             />
             <BottomNav />

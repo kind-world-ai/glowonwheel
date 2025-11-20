@@ -4,10 +4,11 @@ import { motion, AnimatePresence } from 'framer-motion';
 interface WhatsAppButtonProps {
     cartCount: number;
     totalAmount: number;
+    visitCharge: number;
     onCheckout: () => void;
 }
 
-export function WhatsAppButton({ cartCount, totalAmount, onCheckout }: WhatsAppButtonProps) {
+export function WhatsAppButton({ cartCount, totalAmount, visitCharge, onCheckout }: WhatsAppButtonProps) {
     return (
         <AnimatePresence>
             {cartCount > 0 && (
@@ -29,7 +30,9 @@ export function WhatsAppButton({ cartCount, totalAmount, onCheckout }: WhatsAppB
                                 {cartCount}
                             </motion.div>
                             <div className="flex flex-col">
-                                <span className="text-xs text-slate-400">Total</span>
+                                <span className="text-xs text-slate-400">
+                                    {visitCharge === 0 ? "Free Visit" : "+₹99 Visit Charge"}
+                                </span>
                                 <span className="font-bold text-lg text-white">₹{totalAmount}</span>
                             </div>
                         </div>
