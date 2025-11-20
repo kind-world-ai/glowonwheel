@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/button";
 export function ServicesPage() {
     const handleBook = (serviceName: string) => {
         const message = `Hi! I want to book an appointment for: ${serviceName}`;
-        window.open(`https://wa.me/919876543210?text=${message}`, '_blank');
+        window.open(`https://wa.me/918437085459?text=${message}`, '_blank');
     };
 
     return (

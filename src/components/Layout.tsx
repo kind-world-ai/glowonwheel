@@ -22,7 +22,7 @@ export function Layout({ cart, addToCart }: LayoutProps) {
         }).join('%0A');
 
         const message = `Hi! I want to reserve:%0A${itemsList}%0ATotal: ₹${totalAmount}`;
-        window.open(`https://wa.me/919876543210?text=${message}`, '_blank');
+        window.open(`https://wa.me/918437085459?text=${message}`, '_blank');
     };
 
     return (

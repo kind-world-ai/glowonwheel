@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { Sparkles, Plus, ShoppingBag, Scissors, ArrowRight, Brush, Palette, Gem, Footprints, Sun } from 'lucide-react';
+import { Sparkles, Plus, ShoppingBag, Scissors, ArrowRight, Brush, Palette, Gem, Footprints, Sun, Clock } from 'lucide-react';
 import { products, services } from '../data';
 import { useOutletContext, useNavigate } from 'react-router-dom';
 import confetti from 'canvas-confetti';
@@ -63,7 +63,7 @@ export function HomePage() {
 
     const handleBookService = (serviceName: string) => {
         const message = `Hi! I want to book an appointment for: ${serviceName}`;
-        window.open(`https://wa.me/919876543210?text=${message}`, '_blank');
+        window.open(`https://wa.me/918437085459?text=${message}`, '_blank');
     };
 
     const essentialProducts = products.filter(p => p.category === 'Essentials');
@@ -104,6 +104,24 @@ export function HomePage() {
                     >
                         Your daily stop for beauty & shine.
                     </motion.p>
+                </div>
+            </div>
+
+            {/* Business Hours */}
+            <div className="bg-primary/10 py-4 px-4 border-y border-primary/20">
+                <div className="flex items-center justify-center gap-2 mb-2">
+                    <Clock size={20} className="text-primary" />
+                    <h2 className="font-bold text-lg text-foreground">Operating Hours</h2>
+                </div>
+                <div className="grid grid-cols-2 gap-4 text-center">
+                    <div className="bg-background/50 p-2 rounded-lg shadow-sm">
+                        <p className="text-xs font-semibold text-muted-foreground uppercase tracking-wider mb-1">Home Salon</p>
+                        <p className="font-bold text-primary">9:00 AM - 5:00 PM</p>
+                    </div>
+                    <div className="bg-background/50 p-2 rounded-lg shadow-sm">
+                        <p className="text-xs font-semibold text-muted-foreground uppercase tracking-wider mb-1">Stall on Wheels</p>
+                        <p className="font-bold text-amber-600">5:00 PM Onwards</p>
+                    </div>
                 </div>
             </div>
 
