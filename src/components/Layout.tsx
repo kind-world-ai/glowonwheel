@@ -27,7 +27,7 @@ export function Layout({ cart, addToCart }: LayoutProps) {
 
     return (
         <div className="min-h-screen bg-background text-foreground font-sans max-w-md mx-auto shadow-2xl overflow-hidden relative transition-colors duration-300">
-            <span className="font-bold text-lg text-primary">Glow on Wheels</span>
+            <span className="font-bold text-lg text-primary">Glow on Wheel</span>
             <ThemeToggle />
             <Outlet context={{ addToCart }} />
             <WhatsAppButton

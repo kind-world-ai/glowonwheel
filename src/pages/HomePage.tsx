@@ -94,7 +94,7 @@ export function HomePage() {
                         transition={{ delay: 0.1 }}
                         className="text-4xl font-bold text-foreground mb-1 drop-shadow-lg"
                     >
-                        Glow on Wheels
+                        Glow on Wheel
                     </motion.h1>
                     <motion.p
                         initial={{ opacity: 0, y: 20 }}
@@ -119,7 +119,7 @@ export function HomePage() {
                         <p className="font-bold text-primary">9:00 AM - 5:00 PM</p>
                     </div>
                     <div className="bg-background/50 p-2 rounded-lg shadow-sm">
-                        <p className="text-xs font-semibold text-muted-foreground uppercase tracking-wider mb-1">Stall on Wheels</p>
+                        <p className="text-xs font-semibold text-muted-foreground uppercase tracking-wider mb-1">Stall on Wheel</p>
                         <p className="font-bold text-amber-600">5:00 PM Onwards</p>
                     </div>
                 </div>
@@ -288,7 +288,7 @@ export function HomePage() {
                             ></iframe>
                         </div>
                         <div className="p-4 bg-secondary/10">
-                            <p className="font-bold text-foreground">Stall on Wheels</p>
+                            <p className="font-bold text-foreground">Stall on Wheel</p>
                             <p className="text-sm text-muted-foreground">Sector 124, Sunny Enclave, Kharar</p>
                             <Button
                                 asChild

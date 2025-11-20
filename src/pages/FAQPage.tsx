@@ -60,7 +60,7 @@ export function FAQPage() {
                                 <p className="text-xs">9:00 AM - 5:00 PM</p>
                             </div>
                             <div>
-                                <p className="text-[10px] font-semibold text-muted-foreground">Stall on Wheels</p>
+                                <p className="text-[10px] font-semibold text-muted-foreground">Stall on Wheel</p>
                                 <p className="text-xs text-amber-600 font-medium">5:00 PM Onwards</p>
                             </div>
                         </div>
