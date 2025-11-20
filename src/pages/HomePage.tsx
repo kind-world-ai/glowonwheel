@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { Sparkles, Plus, ShoppingBag, Scissors, ArrowRight, Brush, Palette, Gem, Footprints, Sun, Clock } from 'lucide-react';
+import { Sparkles, Plus, ShoppingBag, Scissors, ArrowRight, Brush, Palette, Gem, Footprints, Sun, Clock, MapPin } from 'lucide-react';
 import { products, services } from '../data';
 import { useOutletContext, useNavigate } from 'react-router-dom';
 import confetti from 'canvas-confetti';
@@ -265,6 +265,48 @@ export function HomePage() {
                     ))}
                 </motion.div>
             </div>
-        </div>
+
+            <Separator className="my-2" />
+
+            {/* Find Us Section */}
+            <div className="p-4">
+                <h2 className="font-bold text-xl text-foreground mb-4 flex items-center gap-2">
+                    <MapPin size={20} className="text-primary" />
+                    Find Us
+                </h2>
+                <Card className="overflow-hidden shadow-md">
+                    <CardContent className="p-0">
+                        <div className="aspect-video w-full bg-muted relative">
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3428.9466329337!2d76.65976537624166!3d30.75734377457266!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ff01f1f01e4f9%3A0x2469a1043a14406c!2sSector%20124%2C%20Sunny%20Enclave%2C%20Kharar%2C%20Punjab%20140301!5e0!3m2!1sen!2sin!4v1716300000000!5m2!1sen!2sin"
+                                width="100%"
+                                height="100%"
+                                style={{ border: 0 }}
+                                allowFullScreen
+                                loading="lazy"
+                                referrerPolicy="no-referrer-when-downgrade"
+                            ></iframe>
+                        </div>
+                        <div className="p-4 bg-secondary/10">
+                            <p className="font-bold text-foreground">Stall on Wheels</p>
+                            <p className="text-sm text-muted-foreground">Sector 124, Sunny Enclave, Kharar</p>
+                            <Button
+                                asChild
+                                variant="link"
+                                className="px-0 text-amber-600 h-auto mt-1"
+                            >
+                                <a
+                                    href="https://www.google.com/maps/place/Sector+124,+Sunny+Enclave,+Kharar,+Punjab+140301/@30.7567386,76.6591099,17z/data=!3m1!4b1!4m6!3m5!1s0x390ff01f1f01e4f9:0x2469a1043a14406c!8m2!3d30.7573438!4d76.6623403!16s%2Fg%2F11by_gm3b2?entry=ttu&g_ep=EgoyMDI1MTExNy4wIKXMDSoASAFQAw%3D%3D"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                >
+                                    Get Directions <ArrowRight size={14} className="ml-1" />
+                                </a>
+                            </Button>
+                        </div>
+                    </CardContent>
+                </Card>
+            </div>
+        </div >
     );
 }
