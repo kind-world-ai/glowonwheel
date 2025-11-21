@@ -46,3 +46,9 @@ export const services = [
     { id: 502, name: "Spa Pedicure", price: 800, desc: "Luxury foot treatment", category: "Hands & Feet" },
     { id: 503, name: "Classic Manicure", price: 400, desc: "Essential hand care", category: "Hands & Feet" }
 ];
+
+export const testimonials = [
+    { id: 1, name: "Priya S.", text: "Amazing service! The home salon is so convenient and professional.", rating: 5 },
+    { id: 2, name: "Neha K.", text: "Loved the accessories I bought from the stall. Very trendy!", rating: 5 },
+    { id: 3, name: "Simran J.", text: "Best facial I've had in Mohali. Highly recommend Glow on Wheel.", rating: 5 }
+];

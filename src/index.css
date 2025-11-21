@@ -35,61 +35,54 @@
     font-weight: 400;
 
     /* Light Mode: Warm White bg, Dark Forest Olive text */
-    --background: 45 20% 99%;
-    /* #FCFCFA */
+    --background: 60 30% 96%;
+    /* #F9F7F0 Cream */
     --foreground: 80 30% 12%;
     /* #15190D */
 
     --card: 0 0% 100%;
-    /* White cards for contrast */
     --card-foreground: 80 30% 12%;
 
     --popover: 0 0% 100%;
     --popover-foreground: 80 30% 12%;
 
-    --primary: 85 40% 35%;
-    /* Rich Earthy Olive #4B5E23 */
+    --primary: 85 46% 25%;
+    /* #4B5E23 Olive Green */
     --primary-foreground: 45 20% 99%;
-    /* Warm White */
 
     --secondary: 45 85% 60%;
-    /* Golden Honey #F0C441 */
+    /* #F0C441 Mustard */
     --secondary-foreground: 80 30% 12%;
 
     --muted: 80 10% 92%;
-    /* Sage Grey #E8EAE6 */
     --muted-foreground: 80 20% 40%;
-    /* Muted Olive */
 
     --accent: 45 85% 60%;
-    /* Golden Honey */
     --accent-foreground: 80 30% 12%;
 
     --destructive: 0 84% 60%;
     --destructive-foreground: 210 40% 98%;
 
     --border: 80 20% 85%;
-    /* Light Sage Border */
     --input: 80 20% 85%;
-    --ring: 85 40% 35%;
-    /* Rich Earthy Olive */
+    --ring: 85 46% 25%;
 
     --radius: 0.625rem;
 
-    --chart-1: 85 40% 35%;
+    --chart-1: 85 46% 25%;
     --chart-2: 45 85% 60%;
     --chart-3: 80 30% 12%;
     --chart-4: 73 29% 48%;
     --chart-5: 51 100% 50%;
 
-    --sidebar: 45 20% 99%;
+    --sidebar: 60 30% 96%;
     --sidebar-foreground: 80 30% 12%;
-    --sidebar-primary: 85 40% 35%;
+    --sidebar-primary: 85 46% 25%;
     --sidebar-primary-foreground: 45 20% 99%;
     --sidebar-accent: 80 10% 92%;
     --sidebar-accent-foreground: 80 30% 12%;
     --sidebar-border: 80 20% 85%;
-    --sidebar-ring: 85 40% 35%;
+    --sidebar-ring: 85 46% 25%;
 }
 
 .dark {
@@ -100,18 +93,17 @@
     /* #F9F7F0 */
 
     --card: 70 36% 15%;
-    /* Dark Olive */
     --card-foreground: 48 33% 96%;
 
     --popover: 70 36% 15%;
     --popover-foreground: 48 33% 96%;
 
     --primary: 73 29% 48%;
-    /* Light Olive #6B8E23 */
+    /* #6B8E23 Light Olive */
     --primary-foreground: 48 33% 96%;
 
     --secondary: 51 100% 50%;
-    /* Bright Mustard #FFD700 */
+    /* #FFD700 Bright Mustard */
     --secondary-foreground: 70 36% 15%;
 
     --muted: 70 36% 20%;
