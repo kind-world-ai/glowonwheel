@@ -2,6 +2,8 @@ import { Sparkles, Clock, Check } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
+import { SEO } from '../components/SEO';
+import { SEO_DATA, openWhatsApp } from '../constants';
 
 export function HowToPage() {
     const tips = [
@@ -30,6 +32,12 @@ export function HowToPage() {
 
     return (
         <div className="pb-24 pt-6 px-4 bg-background min-h-screen transition-colors duration-300">
+            <SEO
+                title={SEO_DATA.howto.title}
+                description={SEO_DATA.howto.description}
+                keywords={SEO_DATA.howto.keywords}
+                path="/howto"
+            />
             <h1 className="font-bold text-2xl text-foreground mb-6 flex items-center gap-2">
                 <Sparkles className="text-amber-500" />
                 Beauty Tips
@@ -64,8 +72,12 @@ export function HowToPage() {
 
             <div className="mt-8 text-center">
                 <p className="text-muted-foreground text-sm mb-2">Want to learn more?</p>
-                <Button variant="link" className="text-amber-500 hover:text-amber-600">
-                    Ask Priya on WhatsApp
+                <Button
+                    variant="link"
+                    className="text-amber-500 hover:text-amber-600"
+                    onClick={() => openWhatsApp('Hi! I have a beauty question.')}
+                >
+                    Ask on WhatsApp
                 </Button>
             </div>
         </div>

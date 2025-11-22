@@ -1,0 +1,12 @@
+# Robots.txt for Glow on Wheel
+# https://glowonwheel.com
+
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://glowonwheel.com/sitemap.xml
+
+# Disallow admin or private paths (if any)
+Disallow: /api/
+Disallow: /admin/

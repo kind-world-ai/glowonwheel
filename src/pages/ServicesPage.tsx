@@ -2,15 +2,22 @@ import { Scissors } from 'lucide-react';
 import { services } from '../data';
 import { Card, CardContent, CardTitle, CardDescription } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import { SEO } from '../components/SEO';
+import { SEO_DATA, openWhatsApp } from '../constants';
 
 export function ServicesPage() {
     const handleBook = (serviceName: string) => {
-        const message = `Hi! I want to book an appointment for: ${serviceName}`;
-        window.open(`https://wa.me/918437085459?text=${message}`, '_blank');
+        openWhatsApp(`Hi! I want to book an appointment for: ${serviceName}`);
     };
 
     return (
         <div className="pb-24 pt-6 px-4 bg-background min-h-screen transition-colors duration-300">
+            <SEO
+                title={SEO_DATA.services.title}
+                description={SEO_DATA.services.description}
+                keywords={SEO_DATA.services.keywords}
+                path="/services"
+            />
             <div className="flex items-center gap-3 mb-8">
                 <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center shadow-sm text-primary border border-primary/20">
                     <Scissors size={24} />

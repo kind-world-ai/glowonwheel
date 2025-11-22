@@ -3,20 +3,135 @@
 
 <head>
   <meta charset="UTF-8" />
-  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <link rel="icon" type="image/jpeg" href="/logo.jpg" />
+  <link rel="apple-touch-icon" href="/logo.jpg" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Primary Meta Tags -->
   <title>Glow on Wheel | Mobile Beauty Salon & Accessories in Mohali</title>
-  <meta name="description"
-    content="Glow on Wheel offers professional home salon services and trendy beauty accessories on the go in Mohali. Book facials, waxing, makeup & shop stylish essentials!" />
-  <meta property="og:title" content="Glow on Wheel | Mobile Beauty Salon & Accessories in Mohali" />
-  <meta property="og:description"
-    content="Professional home salon services and trendy beauty accessories at your doorstep in Mohali." />
+  <meta name="title" content="Glow on Wheel | Mobile Beauty Salon & Accessories in Mohali" />
+  <meta name="description" content="Glow on Wheel offers professional home salon services and trendy beauty accessories on the go in Mohali. Book facials, waxing, makeup & shop stylish essentials!" />
+  <meta name="keywords" content="home salon mohali, beauty services kharar, waxing mohali, facial at home, makeup artist mohali, beauty accessories punjab, mobile salon, bridal makeup mohali, mehendi artist, pedicure manicure home service" />
+  <meta name="author" content="Glow on Wheel" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://glowonwheel.com/" />
+
+  <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://glowonwheel.com/" />
+  <meta property="og:title" content="Glow on Wheel | Mobile Beauty Salon & Accessories in Mohali" />
+  <meta property="og:description" content="Professional home salon services and trendy beauty accessories at your doorstep in Mohali. Book facials, waxing, makeup & more!" />
+  <meta property="og:image" content="https://glowonwheel.com/logo.jpg" />
+  <meta property="og:locale" content="en_IN" />
+  <meta property="og:site_name" content="Glow on Wheel" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:url" content="https://glowonwheel.com/" />
+  <meta name="twitter:title" content="Glow on Wheel | Mobile Beauty Salon & Accessories in Mohali" />
+  <meta name="twitter:description" content="Professional home salon services and trendy beauty accessories at your doorstep in Mohali." />
+  <meta name="twitter:image" content="https://glowonwheel.com/logo.jpg" />
+
+  <!-- Theme Color -->
+  <meta name="theme-color" content="#3A4A1A" />
+  <meta name="msapplication-TileColor" content="#3A4A1A" />
+
+  <!-- PWA -->
+  <link rel="manifest" href="/manifest.json" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+  <meta name="apple-mobile-web-app-title" content="Glow on Wheel" />
+
+  <!-- Geo Tags for Local SEO -->
+  <meta name="geo.region" content="IN-PB" />
+  <meta name="geo.placename" content="Mohali" />
+  <meta name="geo.position" content="30.7573438;76.6623403" />
+  <meta name="ICBM" content="30.7573438, 76.6623403" />
+
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Glow on Wheel",
+    "description": "Mobile beauty salon offering home salon services and trendy beauty accessories in Mohali, Punjab",
+    "url": "https://glowonwheel.com",
+    "telephone": "+918437085459",
+    "email": "contact@glowonwheel.com",
+    "image": "https://glowonwheel.com/logo.jpg",
+    "logo": "https://glowonwheel.com/logo.jpg",
+    "priceRange": "₹20 - ₹1500",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Sector 124, Sunny Enclave",
+      "addressLocality": "Kharar",
+      "addressRegion": "Punjab",
+      "postalCode": "140301",
+      "addressCountry": "IN"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 30.7573438,
+      "longitude": 76.6623403
+    },
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+        "opens": "09:00",
+        "closes": "21:00"
+      }
+    ],
+    "sameAs": [],
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Beauty Services",
+      "itemListElement": [
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Home Salon Services",
+            "description": "Professional salon services at your doorstep including facials, waxing, makeup, and more"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Beauty Accessories",
+            "description": "Trendy beauty accessories including earrings, hair bands, makeup products"
+          }
+        }
+      ]
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "5",
+      "reviewCount": "50"
+    }
+  }
+  </script>
 </head>
 
 <body>
   <div id="root"></div>
   <script type="module" src="/src/main.tsx"></script>
+  <script>
+    // Register service worker for PWA
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('/sw.js')
+          .then((registration) => {
+            console.log('SW registered:', registration.scope);
+          })
+          .catch((error) => {
+            console.log('SW registration failed:', error);
+          });
+      });
+    }
+  </script>
 </body>
 
 </html>

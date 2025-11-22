@@ -1,10 +1,18 @@
 import { MapPin, Phone, Clock, ShieldCheck } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import { SEO } from '../components/SEO';
+import { SEO_DATA, BUSINESS_PHONE, GOOGLE_MAPS_EMBED_URL, GOOGLE_MAPS_DIRECTIONS_URL } from '../constants';
 
 export function FAQPage() {
     return (
         <div className="pb-24 pt-6 px-4 bg-background min-h-screen transition-colors duration-300">
+            <SEO
+                title={SEO_DATA.faq.title}
+                description={SEO_DATA.faq.description}
+                keywords={SEO_DATA.faq.keywords}
+                path="/faq"
+            />
             <h1 className="font-bold text-2xl text-foreground mb-6">Info & Location</h1>
 
             {/* Location Card */}
@@ -23,13 +31,14 @@ export function FAQPage() {
                 <CardContent>
                     <div className="aspect-video bg-muted rounded-xl mb-4 overflow-hidden relative flex items-center justify-center border border-border">
                         <iframe
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3428.9466329337!2d76.65976537624166!3d30.75734377457266!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ff01f1f01e4f9%3A0x2469a1043a14406c!2sSector%20124%2C%20Sunny%20Enclave%2C%20Kharar%2C%20Punjab%20140301!5e0!3m2!1sen!2sin!4v1716300000000!5m2!1sen!2sin"
+                            src={GOOGLE_MAPS_EMBED_URL}
                             width="100%"
                             height="100%"
                             style={{ border: 0 }}
                             allowFullScreen
                             loading="lazy"
                             referrerPolicy="no-referrer-when-downgrade"
+                            title="Glow on Wheel Location"
                         ></iframe>
                     </div>
                     <Button
@@ -38,7 +47,7 @@ export function FAQPage() {
                         variant="secondary"
                     >
                         <a
-                            href="https://www.google.com/maps/place/Sector+124,+Sunny+Enclave,+Kharar,+Punjab+140301/@30.7567386,76.6591099,17z/data=!3m1!4b1!4m6!3m5!1s0x390ff01f1f01e4f9:0x2469a1043a14406c!8m2!3d30.7573438!4d76.6623403!16s%2Fg%2F11by_gm3b2?entry=ttu&g_ep=EgoyMDI1MTExNy4wIKXMDSoASAFQAw%3D%3D"
+                            href={GOOGLE_MAPS_DIRECTIONS_URL}
                             target="_blank"
                             rel="noopener noreferrer"
                         >
@@ -70,7 +79,9 @@ export function FAQPage() {
                     <CardContent className="p-4">
                         <Phone className="text-green-500 mb-2" size={20} />
                         <h4 className="font-bold text-card-foreground text-sm">Contact</h4>
-                        <p className="text-xs text-muted-foreground">+91 84370 85459</p>
+                        <a href={`tel:${BUSINESS_PHONE}`} className="text-xs text-muted-foreground hover:text-primary">
+                            +91 84370 85459
+                        </a>
                         <p className="text-[10px] text-muted-foreground/70 mt-1">Call / WhatsApp</p>
                     </CardContent>
                 </Card>
