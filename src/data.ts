@@ -64,7 +64,7 @@ export const products = [
         price: 200,
         category: "Premium",
         description: "Bold drop earrings with intricate detailing. Lightweight design for comfortable all-day wear.",
-        image: "https://images.unsplash.com/photo-1599643478518-17488fbbcd75?auto=format&fit=crop&q=80&w=300"
+        image: "https://images.unsplash.com/photo-1630019852942-f89202989a59?auto=format&fit=crop&q=80&w=300"
     },
     {
         id: 9,
@@ -88,7 +88,7 @@ export const products = [
         price: 80,
         category: "Makeup",
         description: "Smudge-proof kajal for defined eyes. Waterproof formula that lasts all day.",
-        image: "https://images.unsplash.com/photo-1620802051782-7dc65839e3b7?auto=format&fit=crop&q=80&w=300"
+        image: "https://images.unsplash.com/photo-1512496015851-a90fb38ba796?auto=format&fit=crop&q=80&w=300"
     },
     {
         id: 12,
