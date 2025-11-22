@@ -3,7 +3,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { SEO } from '../components/SEO';
-import { SEO_DATA, WHATSAPP_NUMBER } from '../constants';
+import { SEO_DATA, openWhatsApp } from '../constants';
 
 export function HowToPage() {
     const tips = [
@@ -75,7 +75,7 @@ export function HowToPage() {
                 <Button
                     variant="link"
                     className="text-amber-500 hover:text-amber-600"
-                    onClick={() => window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=Hi! I have a beauty question.`, '_blank')}
+                    onClick={() => openWhatsApp('Hi! I have a beauty question.')}
                 >
                     Ask on WhatsApp
                 </Button>

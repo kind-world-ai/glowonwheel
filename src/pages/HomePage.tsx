@@ -11,7 +11,7 @@ import { Separator } from "@/components/ui/separator";
 import { Testimonials } from '../components/Testimonials';
 import { ContactInfo } from '../components/ContactInfo';
 import { SEO } from '../components/SEO';
-import { SEO_DATA, VISITING_CHARGE, FREE_VISIT_THRESHOLD, WHATSAPP_NUMBER } from '../constants';
+import { SEO_DATA, VISITING_CHARGE, FREE_VISIT_THRESHOLD, openWhatsApp } from '../constants';
 
 interface OutletContextType {
     addToCart: (id: number) => void;
@@ -68,10 +68,11 @@ export function HomePage() {
     const handleBookService = (serviceName: string) => {
         const service = services.find(s => s.name === serviceName);
         const price = service ? service.price : 0;
-        const visitNote = price < FREE_VISIT_THRESHOLD ? `%0A(Note: +₹${VISITING_CHARGE} Visiting Charge for orders < ₹${FREE_VISIT_THRESHOLD})` : "%0A(Free Visiting Charge applied!)";
+        const visitNote = price < FREE_VISIT_THRESHOLD
+            ? `\n(Note: +₹${VISITING_CHARGE} Visiting Charge for orders < ₹${FREE_VISIT_THRESHOLD})`
+            : "\n(Free Visiting Charge applied!)";
 
-        const message = `Hi! I want to book the service: ${serviceName}${visitNote}`;
-        window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${message}`, '_blank');
+        openWhatsApp(`Hi! I want to book the service: ${serviceName}${visitNote}`);
     };
 
     const essentialProducts = products.filter(p => p.category === 'Essentials');

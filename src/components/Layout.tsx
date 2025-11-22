@@ -3,7 +3,7 @@ import { BottomNav } from './BottomNav';
 import { WhatsAppButton } from './WhatsAppButton';
 import { ThemeToggle } from './ThemeToggle';
 import { products } from '../data';
-import { WHATSAPP_NUMBER, VISITING_CHARGE, FREE_VISIT_THRESHOLD, BUSINESS_PHONE } from '../constants';
+import { openWhatsApp, VISITING_CHARGE, FREE_VISIT_THRESHOLD, BUSINESS_PHONE } from '../constants';
 
 interface LayoutProps {
     cart: { id: number; qty: number }[];
@@ -23,11 +23,11 @@ export function Layout({ cart, addToCart }: LayoutProps) {
         const itemsList = cart.map(item => {
             const product = products.find(p => p.id === item.id);
             return `${product?.name} x${item.qty}`;
-        }).join('%0A');
+        }).join('\n');
 
         const chargeText = visitCharge === 0 ? "FREE" : `₹${visitCharge}`;
-        const message = `Hi! I want to reserve:%0A${itemsList}%0A----------------%0ASubtotal: ₹${totalAmount}%0AVisit Charge: ${chargeText}%0A----------------%0ATotal: ₹${finalTotal}`;
-        window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${message}`, '_blank');
+        const message = `Hi! I want to reserve:\n${itemsList}\n----------------\nSubtotal: ₹${totalAmount}\nVisit Charge: ${chargeText}\n----------------\nTotal: ₹${finalTotal}`;
+        openWhatsApp(message);
     };
 
     return (

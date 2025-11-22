@@ -3,12 +3,11 @@ import { services } from '../data';
 import { Card, CardContent, CardTitle, CardDescription } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { SEO } from '../components/SEO';
-import { SEO_DATA, WHATSAPP_NUMBER } from '../constants';
+import { SEO_DATA, openWhatsApp } from '../constants';
 
 export function ServicesPage() {
     const handleBook = (serviceName: string) => {
-        const message = `Hi! I want to book an appointment for: ${serviceName}`;
-        window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${message}`, '_blank');
+        openWhatsApp(`Hi! I want to book an appointment for: ${serviceName}`);
     };
 
     return (

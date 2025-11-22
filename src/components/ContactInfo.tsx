@@ -1,4 +1,5 @@
 import { Phone, MapPin, MessageCircle } from 'lucide-react';
+import { BUSINESS_PHONE, getWhatsAppUrl } from '../constants';
 
 export const ContactInfo = () => {
     return (
@@ -8,7 +9,7 @@ export const ContactInfo = () => {
             <div className="space-y-3">
                 <div className="flex items-center gap-3 text-foreground">
                     <Phone className="w-5 h-5 text-primary" />
-                    <a href="tel:+918437085459" className="hover:text-primary font-medium transition-colors">
+                    <a href={`tel:${BUSINESS_PHONE}`} className="hover:text-primary font-medium transition-colors">
                         +91 84370 85459
                     </a>
                 </div>
@@ -16,7 +17,7 @@ export const ContactInfo = () => {
                 <div className="flex items-center gap-3 text-foreground">
                     <MessageCircle className="w-5 h-5 text-primary" />
                     <a
-                        href="https://wa.me/918437085459"
+                        href={getWhatsAppUrl()}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="hover:text-primary font-medium transition-colors"
@@ -38,7 +39,7 @@ export const ContactInfo = () => {
 
             <div className="mt-4">
                 <a
-                    href="https://wa.me/918437085459?text=Hi, I'm interested in your services!"
+                    href={getWhatsAppUrl("Hi, I'm interested in your services!")}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="block w-full bg-[#25D366] hover:bg-[#128C7E] text-white text-center font-bold py-3 rounded-lg transition-colors shadow-md flex items-center justify-center gap-2"
