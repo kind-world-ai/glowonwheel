@@ -6,7 +6,7 @@ export const products = [
         price: 20,
         category: "Essentials",
         description: "Soft elastic bands perfect for everyday use. Gentle on hair, won't cause breakage.",
-        image: "https://images.unsplash.com/photo-1616406432452-07bc59280fdc?auto=format&fit=crop&q=80&w=300"
+        image: "https://images.unsplash.com/photo-1596755389378-c31d21fd1273?auto=format&fit=crop&q=80&w=300"
     },
     {
         id: 2,
@@ -14,7 +14,7 @@ export const products = [
         price: 30,
         category: "Essentials",
         description: "Sturdy banana clips for secure hold. Perfect for thick hair and quick styling.",
-        image: "https://images.unsplash.com/photo-1560899732-839713752936?auto=format&fit=crop&q=80&w=300"
+        image: "https://images.unsplash.com/photo-1522338242992-e1a54906a8da?auto=format&fit=crop&q=80&w=300"
     },
     {
         id: 3,
@@ -38,7 +38,7 @@ export const products = [
         price: 20,
         category: "Essentials",
         description: "Assorted bindis in traditional and modern designs. Self-adhesive, easy to apply.",
-        image: "https://images.unsplash.com/photo-1621163572730-227917773c26?auto=format&fit=crop&q=80&w=300"
+        image: "https://images.unsplash.com/photo-1583939003579-730e3918a45a?auto=format&fit=crop&q=80&w=300"
     },
     {
         id: 6,
@@ -46,7 +46,7 @@ export const products = [
         price: 20,
         category: "Essentials",
         description: "Multi-size safety pins for all your needs. Rust-resistant, secure closure.",
-        image: "https://images.unsplash.com/photo-1611575342766-25b475468c94?auto=format&fit=crop&q=80&w=300"
+        image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&q=80&w=300"
     },
 
     // Category B: Premium / Impulse (₹80-250)
