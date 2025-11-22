@@ -1,8 +1,9 @@
-import { Outlet } from 'react-router-dom';
+import { Outlet, Link } from 'react-router-dom';
 import { BottomNav } from './BottomNav';
 import { WhatsAppButton } from './WhatsAppButton';
 import { ThemeToggle } from './ThemeToggle';
 import { products } from '../data';
+import { WHATSAPP_NUMBER, VISITING_CHARGE, FREE_VISIT_THRESHOLD, BUSINESS_PHONE } from '../constants';
 
 interface LayoutProps {
     cart: { id: number; qty: number }[];
@@ -15,7 +16,7 @@ export function Layout({ cart, addToCart }: LayoutProps) {
         return sum + (product ? product.price * item.qty : 0);
     }, 0);
 
-    const visitCharge = totalAmount >= 499 ? 0 : 99;
+    const visitCharge = totalAmount >= FREE_VISIT_THRESHOLD ? 0 : VISITING_CHARGE;
     const finalTotal = totalAmount + visitCharge;
 
     const handleCheckout = () => {
@@ -26,7 +27,7 @@ export function Layout({ cart, addToCart }: LayoutProps) {
 
         const chargeText = visitCharge === 0 ? "FREE" : `₹${visitCharge}`;
         const message = `Hi! I want to reserve:%0A${itemsList}%0A----------------%0ASubtotal: ₹${totalAmount}%0AVisit Charge: ${chargeText}%0A----------------%0ATotal: ₹${finalTotal}`;
-        window.open(`https://wa.me/918437085459?text=${message}`, '_blank');
+        window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${message}`, '_blank');
     };
 
     return (
@@ -54,17 +55,25 @@ export function Layout({ cart, addToCart }: LayoutProps) {
                         <div>
                             <h4 className="font-bold text-lg mb-3 text-mustard">Quick Links</h4>
                             <ul className="space-y-2 text-sm">
-                                <li><a href="/" className="hover:text-mustard">Home</a></li>
-                                <li><a href="/services" className="hover:text-mustard">Services</a></li>
-                                <li><a href="/faq" className="hover:text-mustard">FAQ</a></li>
+                                <li><Link to="/" className="hover:text-mustard">Home</Link></li>
+                                <li><Link to="/services" className="hover:text-mustard">Services</Link></li>
+                                <li><Link to="/faq" className="hover:text-mustard">FAQ</Link></li>
                             </ul>
                         </div>
 
                         <div>
                             <h4 className="font-bold text-lg mb-3 text-mustard">Contact</h4>
                             <p className="text-sm mb-1">Mon - Sun: 9:00 AM - 9:00 PM</p>
-                            <p className="text-sm mb-1">+91 84370 85459</p>
+                            <a href={`tel:${BUSINESS_PHONE}`} className="text-sm mb-1 block hover:text-mustard">+91 84370 85459</a>
                             <p className="text-sm">Mohali, Punjab</p>
+                        </div>
+
+                        <div>
+                            <h4 className="font-bold text-lg mb-3 text-mustard">Legal</h4>
+                            <ul className="space-y-2 text-sm">
+                                <li><Link to="/privacy" className="hover:text-mustard">Privacy Policy</Link></li>
+                                <li><Link to="/terms" className="hover:text-mustard">Terms of Service</Link></li>
+                            </ul>
                         </div>
                     </div>
                     <div className="mt-8 pt-8 border-t border-olive/30 text-center text-xs text-cream/60">
