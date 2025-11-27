@@ -8,7 +8,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";
-import { Testimonials } from '../components/Testimonials';
+import { GoogleReviews } from '../components/GoogleReviews';
 import { ContactInfo } from '../components/ContactInfo';
 import { SEO } from '../components/SEO';
 import { SEO_DATA, VISITING_CHARGE, FREE_VISIT_THRESHOLD, openWhatsApp } from '../constants';
@@ -335,7 +335,7 @@ export function HomePage() {
                 </div>
             </div>
 
-            <Testimonials testimonials={testimonials} />
+            <GoogleReviews reviews={testimonials} />
 
             {/* Find Us Section */}
             <div className="py-12 px-4 bg-card">

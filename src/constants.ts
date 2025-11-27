@@ -75,6 +75,11 @@ export const SEO_DATA = {
     title: "Terms of Service | Glow on Wheel",
     description: "Terms and conditions for using Glow on Wheel services and website.",
     keywords: "terms of service, terms and conditions"
+  },
+  gallery: {
+    title: "Before & After Gallery | Glow on Wheel Transformations in Mohali",
+    description: "See stunning before & after transformations from our facial, makeup, and hair services in Mohali. Real results from real clients at Glow on Wheel.",
+    keywords: "before after gallery, facial transformation mohali, makeup before after, hair styling results, beauty salon transformations kharar"
   }
 };
 

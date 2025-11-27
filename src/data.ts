@@ -134,58 +134,42 @@ export const services = [
 export const testimonials = [
     {
         id: 1,
-        name: "Priya Sharma",
-        text: "Amazing service! The home salon is so convenient and professional. Simran did my bridal makeup and I received so many compliments!",
+        name: "Amrit Pal Sharma",
+        text: "Pedicure was amazing I will call you again for same highly recommended !",
         rating: 5,
-        date: "October 2025",
-        service: "Bridal Makeup"
+        date: "a month ago",
+        service: "Pedicure"
     },
     {
         id: 2,
-        name: "Neha Kaur",
-        text: "Loved the accessories I bought from the stall. Very trendy collection and great prices. The pearl necklace is my favorite!",
+        name: "Kanchaan Thakur",
+        text: "Great work done by Archita. A professional cosmetician.",
         rating: 5,
-        date: "November 2025",
-        service: "Accessories"
+        date: "2 months ago",
+        service: "Beauty Services"
     },
     {
         id: 3,
-        name: "Simran Jain",
-        text: "Best facial I've had in Mohali. My skin felt so fresh and glowing for days. Highly recommend Glow on Wheel.",
+        name: "RAHI creations",
+        text: "Well experienced and dedicated services.. Must try",
         rating: 5,
-        date: "September 2025",
-        service: "Gold Facial"
+        date: "3 months ago",
+        service: "General"
     },
     {
         id: 4,
-        name: "Aarti Gupta",
-        text: "Booked full body waxing and the service was quick and hygienic. Very professional staff, and the free home visit saved me a trip!",
+        name: "Happy Customer",
+        text: "Amazing work by Archita from glow on wheel Highly recommended!!",
         rating: 5,
-        date: "October 2025",
-        service: "Full Body Waxing"
+        date: "a month ago",
+        service: "Beauty Services"
     },
     {
         id: 5,
-        name: "Meera Patel",
-        text: "Got my mehendi done for my sister's wedding. Beautiful intricate designs! Will definitely book again for Diwali.",
-        rating: 4,
-        date: "November 2025",
-        service: "Mehendi"
-    },
-    {
-        id: 6,
-        name: "Ritu Singh",
-        text: "The spa pedicure was so relaxing! Perfect after a long week. Affordable prices and great products used.",
+        name: "Satisfied Client",
+        text: "Professional service at home. Very convenient and hygienic.",
         rating: 5,
-        date: "August 2025",
-        service: "Spa Pedicure"
-    },
-    {
-        id: 7,
-        name: "Kavita Dhawan",
-        text: "Regular customer for their waxing services. Always on time and very gentle. The best in Sunny Enclave!",
-        rating: 5,
-        date: "November 2025",
-        service: "Waxing"
+        date: "2 weeks ago",
+        service: "Home Salon"
     }
 ];

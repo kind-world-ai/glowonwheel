@@ -1,4 +1,4 @@
-import { Home, Scissors, Sparkles, MapPin } from 'lucide-react';
+import { Home, Scissors, MapPin, Image } from 'lucide-react';
 import { Link, useLocation } from 'react-router-dom';
 
 export function BottomNav() {
@@ -9,7 +9,7 @@ export function BottomNav() {
     const navItems = [
         { path: '/', icon: Home, label: 'Shop' },
         { path: '/services', icon: Scissors, label: 'Salon' },
-        { path: '/howto', icon: Sparkles, label: 'Tips' },
+        { path: '/gallery', icon: Image, label: 'Gallery' },
         { path: '/faq', icon: MapPin, label: 'Info' },
     ];
 
@@ -21,8 +21,8 @@ export function BottomNav() {
                         key={item.path}
                         to={item.path}
                         className={`flex flex-col items-center gap-1 p-2 transition-colors ${isActive(item.path)
-                                ? 'text-amber-500'
-                                : 'text-slate-500 hover:text-slate-300'
+                            ? 'text-amber-500'
+                            : 'text-slate-500 hover:text-slate-300'
                             }`}
                     >
                         <item.icon size={20} strokeWidth={isActive(item.path) ? 2.5 : 2} />
