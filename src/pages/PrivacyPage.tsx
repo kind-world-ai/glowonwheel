@@ -5,7 +5,7 @@ import { Shield } from 'lucide-react';
 
 export function PrivacyPage() {
   return (
-    <div className="bg-background text-foreground min-h-screen py-8 px-4">
+    <div className="bg-background text-foreground min-h-screen pt-24 pb-8 px-4">
       <SEO
         title={SEO_DATA.privacy.title}
         description={SEO_DATA.privacy.description}

@@ -6,7 +6,7 @@ import { SEO_DATA, BUSINESS_PHONE, GOOGLE_MAPS_EMBED_URL, GOOGLE_MAPS_DIRECTIONS
 
 export function FAQPage() {
     return (
-        <div className="pb-24 pt-6 px-4 bg-background min-h-screen transition-colors duration-300">
+        <div className="pb-24 pt-24 px-4 bg-background min-h-screen transition-colors duration-300">
             <SEO
                 title={SEO_DATA.faq.title}
                 description={SEO_DATA.faq.description}

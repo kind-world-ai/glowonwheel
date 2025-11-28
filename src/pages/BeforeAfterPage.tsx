@@ -56,7 +56,7 @@ export function BeforeAfterPage() {
             />
 
             {/* Hero Section */}
-            <div className="relative py-16 px-4 bg-gradient-to-b from-primary/5 to-background">
+            <div className="relative pt-28 pb-16 px-4 bg-gradient-to-b from-primary/5 to-background">
                 <div className="max-w-4xl mx-auto text-center">
                     <motion.div
                         initial={{ opacity: 0, y: 20 }}

@@ -3,6 +3,7 @@ import { BottomNav } from './BottomNav';
 import { WhatsAppButton } from './WhatsAppButton';
 import { ThemeToggle } from './ThemeToggle';
 import { products } from '../data';
+import logo from '../assets/logo.png';
 import { openWhatsApp, VISITING_CHARGE, FREE_VISIT_THRESHOLD, BUSINESS_PHONE } from '../constants';
 
 interface LayoutProps {
@@ -32,7 +33,9 @@ export function Layout({ cart, addToCart }: LayoutProps) {
 
     return (
         <div className="min-h-screen bg-background text-foreground font-sans max-w-md mx-auto shadow-2xl overflow-hidden relative transition-colors duration-300">
-            <span className="font-bold text-lg text-primary">Glow on Wheel</span>
+            <div className="absolute top-4 left-4 z-50">
+                <img src={logo} alt="Glow on Wheel" className="w-16 h-16 rounded-full shadow-lg border-2 border-white/20" />
+            </div>
             <ThemeToggle />
             <div className="flex-1 pb-24">
                 <Outlet context={{ addToCart }} />
@@ -42,7 +45,7 @@ export function Layout({ cart, addToCart }: LayoutProps) {
                 <div className="container mx-auto">
                     <div className="grid grid-cols-1 gap-8">
                         <div>
-                            <h3 className="text-xl font-bold mb-4 text-mustard">Glow on Wheel</h3>
+                            <img src={logo} alt="Glow on Wheel" className="w-24 h-24 mb-4 rounded-full" />
                             <p className="text-sm text-cream/80 mb-4">
                                 Bringing professional salon services and trendy beauty essentials right to your doorstep in Mohali.
                             </p>

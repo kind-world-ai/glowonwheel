@@ -31,7 +31,7 @@ export const ContactInfo = () => {
                     <div>
                         <p className="font-medium">Operating Areas:</p>
                         <p className="text-sm text-muted-foreground">
-                            Mohali (Sectors 68-71, Phases 7-11), Kharar, and parts of Chandigarh.
+                            Mohali, Chandigarh, and Kharar.
                         </p>
                     </div>
                 </div>

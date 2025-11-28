@@ -31,7 +31,7 @@ export function HowToPage() {
     ];
 
     return (
-        <div className="pb-24 pt-6 px-4 bg-background min-h-screen transition-colors duration-300">
+        <div className="pb-24 pt-24 px-4 bg-background min-h-screen transition-colors duration-300">
             <SEO
                 title={SEO_DATA.howto.title}
                 description={SEO_DATA.howto.description}

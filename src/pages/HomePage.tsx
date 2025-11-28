@@ -12,6 +12,7 @@ import { GoogleReviews } from '../components/GoogleReviews';
 import { ContactInfo } from '../components/ContactInfo';
 import { SEO } from '../components/SEO';
 import { SEO_DATA, VISITING_CHARGE, FREE_VISIT_THRESHOLD, openWhatsApp } from '../constants';
+import logo from '../assets/logo.png';
 
 interface OutletContextType {
     addToCart: (id: number) => void;
@@ -103,14 +104,14 @@ export function HomePage() {
                             MOBILE BEAUTY BOUTIQUE
                         </Badge>
                     </motion.div>
-                    <motion.h1
+                    <motion.div
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.1 }}
-                        className="text-5xl font-bold text-cream mb-4 drop-shadow-xl font-serif"
+                        className="mb-6 flex justify-center"
                     >
-                        Glow on Wheel
-                    </motion.h1>
+                        <img src={logo} alt="Glow on Wheel" className="w-48 h-48 rounded-full shadow-2xl border-4 border-white/20" />
+                    </motion.div>
                     <motion.p
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
