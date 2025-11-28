@@ -4,7 +4,7 @@ import { WhatsAppButton } from './WhatsAppButton';
 import { ThemeToggle } from './ThemeToggle';
 import { products } from '../data';
 import logo from '../assets/logo.png';
-import { Instagram, Facebook, Phone, ExternalLink } from 'lucide-react';
+import { Instagram, Facebook, ExternalLink } from 'lucide-react';
 import { openWhatsApp, VISITING_CHARGE, FREE_VISIT_THRESHOLD, BUSINESS_PHONE } from '../constants';
 
 interface LayoutProps {
