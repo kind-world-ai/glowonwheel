@@ -116,10 +116,10 @@ export function ProductSlider({
                             key={index}
                             onClick={() => goToSlide(index)}
                             className={cn(
-                                "h-2 rounded-full transition-all",
+                                "h-3 rounded-full transition-all mx-1",
                                 index === currentIndex
                                     ? "w-8 bg-primary"
-                                    : "w-2 bg-muted-foreground/30"
+                                    : "w-3 bg-muted-foreground/50 hover:bg-muted-foreground/70"
                             )}
                             aria-label={`Go to slide ${index + 1}`}
                         />

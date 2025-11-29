@@ -24,6 +24,7 @@ export function ThemeToggle() {
         <motion.button
             whileTap={{ scale: 0.9 }}
             onClick={toggleTheme}
+            aria-label="Toggle theme"
             className="fixed top-4 right-4 z-50 p-2 rounded-full bg-secondary text-secondary-foreground shadow-lg border border-border"
         >
             {theme === "dark" ? <Sun size={20} /> : <Moon size={20} />}

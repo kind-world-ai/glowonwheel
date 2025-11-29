@@ -37,16 +37,17 @@ export function Layout({ cart, addToCart }: LayoutProps) {
             <div className="absolute top-4 left-4 z-50 flex items-center gap-3">
                 <img src={logo} alt="Glow on Wheel" className="w-16 h-16 rounded-full shadow-lg border-2 border-white/20" />
                 <div className="flex gap-2">
-                    <a href="https://www.instagram.com/glowonwheel/" target="_blank" rel="noopener noreferrer" className="w-8 h-8 rounded-full bg-primary/10 hover:bg-primary/20 flex items-center justify-center text-primary transition-colors">
+                    <a href="https://www.instagram.com/glowonwheel/" target="_blank" rel="noopener noreferrer" aria-label="Follow us on Instagram" className="w-8 h-8 rounded-full bg-primary/10 hover:bg-primary/20 flex items-center justify-center text-primary transition-colors">
                         <Instagram size={16} />
                     </a>
-                    <a href="https://www.facebook.com/TheGlowonwheel/" target="_blank" rel="noopener noreferrer" className="w-8 h-8 rounded-full bg-primary/10 hover:bg-primary/20 flex items-center justify-center text-primary transition-colors">
+                    <a href="https://www.facebook.com/TheGlowonwheel/" target="_blank" rel="noopener noreferrer" aria-label="Follow us on Facebook" className="w-8 h-8 rounded-full bg-primary/10 hover:bg-primary/20 flex items-center justify-center text-primary transition-colors">
                         <Facebook size={16} />
                     </a>
                     <a
                         href="https://wa.me/c/918437085459"
                         target="_blank"
                         rel="noopener noreferrer"
+                        aria-label="Chat with us on WhatsApp"
                         className="w-10 h-10 rounded-full bg-[#25D366]/20 hover:bg-[#25D366]/30 flex items-center justify-center transition-all"
                     >
                         <svg
@@ -59,7 +60,7 @@ export function Layout({ cart, addToCart }: LayoutProps) {
                             <path d="M16.01 2.01c-7.73 0-14 6.27-14 14 0 2.47.64 4.83 1.87 6.93L2 30l7.26-1.9A13.93 13.93 0 0016 30c7.73 0 14-6.27 14-14s-6.27-14-14-14zm0 25.27c-2.23 0-4.4-.59-6.31-1.71l-.45-.27-4.31 1.13 1.15-4.21-.29-.45A11.29 11.29 0 014.7 16c0-6.25 5.06-11.31 11.31-11.31S27.31 9.75 27.31 16 22.25 27.28 16 27.28zm6.31-8.42c-.34-.17-2.03-1-2.35-1.11-.31-.11-.54-.17-.76.17-.23.34-.88 1.11-1.08 1.34-.2.23-.4.26-.74.09-.34-.17-1.43-.53-2.73-1.69-1.01-.9-1.69-2.01-1.89-2.35-.2-.34-.02-.52.15-.69.16-.16.34-.4.51-.6.17-.2.23-.34.34-.57.11-.23.06-.43-.03-.6-.09-.17-.76-1.83-1.04-2.52-.27-.65-.55-.56-.76-.57l-.65-.01c-.23 0-.6.09-.91.44s-1.19 1.16-1.19 2.83 1.22 3.28 1.39 3.5c.17.23 2.41 3.68 5.84 5.02.82.35 1.46.56 1.96.71.82.26 1.56.22 2.14.13.65-.1 2.03-.83 2.32-1.63.29-.8.29-1.49.2-1.63-.09-.14-.31-.23-.65-.4z" />
                         </svg>
                     </a>
-                    <a href="https://linktr.ee/Theglowonwheel" target="_blank" rel="noopener noreferrer" className="w-8 h-8 rounded-full bg-primary/10 hover:bg-primary/20 flex items-center justify-center text-primary transition-colors">
+                    <a href="https://linktr.ee/Theglowonwheel" target="_blank" rel="noopener noreferrer" aria-label="Visit our Linktree" className="w-8 h-8 rounded-full bg-primary/10 hover:bg-primary/20 flex items-center justify-center text-primary transition-colors">
                         <ExternalLink size={16} />
                     </a>
                 </div>
@@ -80,16 +81,17 @@ export function Layout({ cart, addToCart }: LayoutProps) {
                             <div className="space-y-3">
                                 <h4 className="font-bold text-sm text-secondary">Follow Us</h4>
                                 <div className="flex gap-3">
-                                    <a href="https://www.instagram.com/glowonwheel/" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-primary-foreground/10 hover:bg-secondary/20 flex items-center justify-center text-primary-foreground hover:text-secondary transition-all">
+                                    <a href="https://www.instagram.com/glowonwheel/" target="_blank" rel="noopener noreferrer" aria-label="Follow us on Instagram" className="w-10 h-10 rounded-full bg-primary-foreground/10 hover:bg-secondary/20 flex items-center justify-center text-primary-foreground hover:text-secondary transition-all">
                                         <Instagram size={20} />
                                     </a>
-                                    <a href="https://www.facebook.com/TheGlowonwheel/" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-primary-foreground/10 hover:bg-secondary/20 flex items-center justify-center text-primary-foreground hover:text-secondary transition-all">
+                                    <a href="https://www.facebook.com/TheGlowonwheel/" target="_blank" rel="noopener noreferrer" aria-label="Follow us on Facebook" className="w-10 h-10 rounded-full bg-primary-foreground/10 hover:bg-secondary/20 flex items-center justify-center text-primary-foreground hover:text-secondary transition-all">
                                         <Facebook size={20} />
                                     </a>
                                     <a
                                         href="https://wa.me/c/918437085459"
                                         target="_blank"
                                         rel="noopener noreferrer"
+                                        aria-label="Chat with us on WhatsApp"
                                         className="w-10 h-10 rounded-full bg-[#25D366]/20 hover:bg-[#25D366]/30 flex items-center justify-center transition-all"
                                     >
                                         <svg
@@ -102,7 +104,7 @@ export function Layout({ cart, addToCart }: LayoutProps) {
                                             <path d="M16.01 2.01c-7.73 0-14 6.27-14 14 0 2.47.64 4.83 1.87 6.93L2 30l7.26-1.9A13.93 13.93 0 0016 30c7.73 0 14-6.27 14-14s-6.27-14-14-14zm0 25.27c-2.23 0-4.4-.59-6.31-1.71l-.45-.27-4.31 1.13 1.15-4.21-.29-.45A11.29 11.29 0 014.7 16c0-6.25 5.06-11.31 11.31-11.31S27.31 9.75 27.31 16 22.25 27.28 16 27.28zm6.31-8.42c-.34-.17-2.03-1-2.35-1.11-.31-.11-.54-.17-.76.17-.23.34-.88 1.11-1.08 1.34-.2.23-.4.26-.74.09-.34-.17-1.43-.53-2.73-1.69-1.01-.9-1.69-2.01-1.89-2.35-.2-.34-.02-.52.15-.69.16-.16.34-.4.51-.6.17-.2.23-.34.34-.57.11-.23.06-.43-.03-.6-.09-.17-.76-1.83-1.04-2.52-.27-.65-.55-.56-.76-.57l-.65-.01c-.23 0-.6.09-.91.44s-1.19 1.16-1.19 2.83 1.22 3.28 1.39 3.5c.17.23 2.41 3.68 5.84 5.02.82.35 1.46.56 1.96.71.82.26 1.56.22 2.14.13.65-.1 2.03-.83 2.32-1.63.29-.8.29-1.49.2-1.63-.09-.14-.31-.23-.65-.4z" />
                                         </svg>
                                     </a>
-                                    <a href="https://linktr.ee/Theglowonwheel" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-primary-foreground/10 hover:bg-secondary/20 flex items-center justify-center text-primary-foreground hover:text-secondary transition-all">
+                                    <a href="https://linktr.ee/Theglowonwheel" target="_blank" rel="noopener noreferrer" aria-label="Visit our Linktree" className="w-10 h-10 rounded-full bg-primary-foreground/10 hover:bg-secondary/20 flex items-center justify-center text-primary-foreground hover:text-secondary transition-all">
                                         <ExternalLink size={20} />
                                     </a>
                                 </div>
