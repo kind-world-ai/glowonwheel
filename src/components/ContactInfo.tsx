@@ -39,12 +39,11 @@ export const ContactInfo = () => {
 
             <div className="mt-4">
                 <a
-                    href={getWhatsAppUrl("Hi, I'm interested in your services!")}
+                    href={`https://wa.me/${BUSINESS_PHONE}?text=Hi%2C%20I'm%20interested%20in%20your%20services`}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="block w-full bg-[#25D366] hover:bg-[#128C7E] text-white text-center font-bold py-3 rounded-lg transition-colors shadow-md flex items-center justify-center gap-2"
+                    className="block w-full bg-[#128C7E] hover:bg-[#075E54] text-white text-center font-bold py-3 rounded-xl transition-colors shadow-md"
                 >
-                    <MessageCircle size={20} />
                     Book Appointment
                 </a>
             </div>
