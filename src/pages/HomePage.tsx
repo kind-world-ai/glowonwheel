@@ -80,7 +80,7 @@ export function HomePage() {
     const featuredServices = services.slice(0, 4); // Show first 4 services
 
     return (
-        <div className="bg-background text-foreground min-h-screen transition-colors duration-300">
+        <main className="bg-background text-foreground min-h-screen transition-colors duration-300">
             <SEO
                 title={SEO_DATA.home.title}
                 description={SEO_DATA.home.description}
@@ -88,10 +88,12 @@ export function HomePage() {
                 path="/"
             />
             {/* Hero Section */}
-            <div className="relative h-[500px] overflow-hidden bg-olive-dark">
+            <div className="relative h-[500px] overflow-hidden bg-primary">
                 <img
                     src="https://images.unsplash.com/photo-1522337660859-02fbefca4702?auto=format&fit=crop&q=80&w=800"
                     alt="Glow on Wheel Setup"
+                    width="800"
+                    height="500"
                     className="w-full h-full object-cover opacity-40 scale-105 animate-pulse-slow"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent" />
@@ -100,7 +102,7 @@ export function HomePage() {
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                     >
-                        <Badge className="bg-mustard text-olive-dark hover:bg-mustard/90 shadow-[0_0_15px_rgba(240,196,65,0.5)] mb-4 px-4 py-1 text-sm">
+                        <Badge className="bg-secondary text-secondary-foreground hover:bg-secondary/90 shadow-[0_0_15px_rgba(240,196,65,0.5)] mb-4 px-4 py-1 text-sm">
                             MOBILE BEAUTY BOUTIQUE
                         </Badge>
                     </motion.div>
@@ -110,16 +112,16 @@ export function HomePage() {
                         transition={{ delay: 0.1 }}
                         className="mb-6 flex justify-center"
                     >
-                        <img src={logo} alt="Glow on Wheel" className="w-48 h-48 rounded-full shadow-2xl border-4 border-white/20" />
+                        <img src={logo} alt="Glow on Wheel" width="192" height="192" className="w-48 h-48 rounded-full shadow-2xl border-4 border-white/20" />
                     </motion.div>
-                    <motion.p
+                    <motion.h1
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.2 }}
-                        className="text-cream/90 text-lg font-medium mb-6 max-w-xs mx-auto leading-relaxed"
+                        className="text-primary-foreground/90 text-lg font-medium mb-6 max-w-xs mx-auto leading-relaxed"
                     >
                         Your Mobile Beauty Salon & Accessory Boutique in Mohali!
-                    </motion.p>
+                    </motion.h1>
                     <motion.div
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
@@ -127,14 +129,14 @@ export function HomePage() {
                         className="flex gap-3 justify-center"
                     >
                         <Button
-                            className="bg-mustard text-olive-dark hover:bg-mustard/90 font-bold"
+                            className="bg-secondary text-secondary-foreground hover:bg-secondary/90 font-bold"
                             onClick={() => navigate('/services')}
                         >
                             Book Salon
                         </Button>
                         <Button
                             variant="outline"
-                            className="text-cream border-cream hover:bg-cream hover:text-olive-dark"
+                            className="text-primary-foreground border-primary-foreground hover:bg-primary-foreground hover:text-primary"
                             onClick={() => document.getElementById('products')?.scrollIntoView({ behavior: 'smooth' })}
                         >
                             Shop Now
@@ -218,6 +220,9 @@ export function HomePage() {
                                                 <img
                                                     src={product.image}
                                                     alt={product.name}
+                                                    loading="lazy"
+                                                    width="128"
+                                                    height="128"
                                                     className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                                                 />
                                             </div>
@@ -310,6 +315,9 @@ export function HomePage() {
                                             <img
                                                 src={product.image}
                                                 alt={product.name}
+                                                loading="lazy"
+                                                width="300"
+                                                height="300"
                                                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                                             />
                                             <Badge className="absolute top-2 right-2 bg-background/90 backdrop-blur-md text-secondary border-none shadow-sm">
@@ -383,6 +391,6 @@ export function HomePage() {
                     </div>
                 </div>
             </div>
-        </div >
+        </main >
     );
 }

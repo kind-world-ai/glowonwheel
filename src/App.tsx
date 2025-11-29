@@ -1,16 +1,18 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, Suspense, lazy } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { Layout } from './components/Layout';
 import { ScrollToTop } from './components/ScrollToTop';
 import { ErrorBoundary } from './components/ErrorBoundary';
-import { HomePage } from './pages/HomePage';
-import { ServicesPage } from './pages/ServicesPage';
-import { HowToPage } from './pages/HowToPage';
-import { FAQPage } from './pages/FAQPage';
-import { PrivacyPage } from './pages/PrivacyPage';
-import { TermsPage } from './pages/TermsPage';
-import { BeforeAfterPage } from './pages/BeforeAfterPage';
-import { SkinQuizPage } from './pages/SkinQuizPage';
+
+// Lazy load pages
+const HomePage = lazy(() => import('./pages/HomePage').then(module => ({ default: module.HomePage })));
+const ServicesPage = lazy(() => import('./pages/ServicesPage').then(module => ({ default: module.ServicesPage })));
+const HowToPage = lazy(() => import('./pages/HowToPage').then(module => ({ default: module.HowToPage })));
+const FAQPage = lazy(() => import('./pages/FAQPage').then(module => ({ default: module.FAQPage })));
+const PrivacyPage = lazy(() => import('./pages/PrivacyPage').then(module => ({ default: module.PrivacyPage })));
+const TermsPage = lazy(() => import('./pages/TermsPage').then(module => ({ default: module.TermsPage })));
+const BeforeAfterPage = lazy(() => import('./pages/BeforeAfterPage').then(module => ({ default: module.BeforeAfterPage })));
+const SkinQuizPage = lazy(() => import('./pages/SkinQuizPage').then(module => ({ default: module.SkinQuizPage })));
 
 const CART_STORAGE_KEY = 'glowonwheel_cart';
 
@@ -48,18 +50,24 @@ function App() {
     <ErrorBoundary>
       <BrowserRouter>
         <ScrollToTop />
-        <Routes>
-          <Route path="/" element={<Layout cart={cart} addToCart={addToCart} />}>
-            <Route index element={<HomePage />} />
-            <Route path="services" element={<ServicesPage />} />
-            <Route path="howto" element={<HowToPage />} />
-            <Route path="faq" element={<FAQPage />} />
-            <Route path="privacy" element={<PrivacyPage />} />
-            <Route path="terms" element={<TermsPage />} />
-            <Route path="gallery" element={<BeforeAfterPage />} />
-            <Route path="skin-quiz" element={<SkinQuizPage />} />
-          </Route>
-        </Routes>
+        <Suspense fallback={
+          <div className="min-h-screen flex items-center justify-center bg-background">
+            <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-primary"></div>
+          </div>
+        }>
+          <Routes>
+            <Route path="/" element={<Layout cart={cart} addToCart={addToCart} />}>
+              <Route index element={<HomePage />} />
+              <Route path="services" element={<ServicesPage />} />
+              <Route path="howto" element={<HowToPage />} />
+              <Route path="faq" element={<FAQPage />} />
+              <Route path="privacy" element={<PrivacyPage />} />
+              <Route path="terms" element={<TermsPage />} />
+              <Route path="gallery" element={<BeforeAfterPage />} />
+              <Route path="skin-quiz" element={<SkinQuizPage />} />
+            </Route>
+          </Routes>
+        </Suspense>
       </BrowserRouter>
     </ErrorBoundary>
   );

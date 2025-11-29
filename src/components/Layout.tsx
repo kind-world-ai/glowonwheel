@@ -69,21 +69,21 @@ export function Layout({ cart, addToCart }: LayoutProps) {
                 <Outlet context={{ addToCart }} />
             </div>
 
-            <footer className="bg-olive-dark text-cream py-8 px-4 pb-24">
+            <footer className="bg-primary text-primary-foreground py-8 px-4 pb-24">
                 <div className="container mx-auto">
                     <div className="grid grid-cols-1 gap-8">
                         <div>
                             <img src={logo} alt="Glow on Wheel" className="w-24 h-24 mb-4 rounded-full" />
-                            <p className="text-sm text-cream/80 mb-4">
+                            <p className="text-sm text-primary-foreground/80 mb-4">
                                 Bringing professional salon services and trendy beauty essentials right to your doorstep in Mohali.
                             </p>
                             <div className="space-y-3">
-                                <h4 className="font-bold text-sm text-mustard">Follow Us</h4>
+                                <h4 className="font-bold text-sm text-secondary">Follow Us</h4>
                                 <div className="flex gap-3">
-                                    <a href="https://www.instagram.com/glowonwheel/" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-cream/10 hover:bg-mustard/20 flex items-center justify-center text-cream hover:text-mustard transition-all">
+                                    <a href="https://www.instagram.com/glowonwheel/" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-primary-foreground/10 hover:bg-secondary/20 flex items-center justify-center text-primary-foreground hover:text-secondary transition-all">
                                         <Instagram size={20} />
                                     </a>
-                                    <a href="https://www.facebook.com/TheGlowonwheel/" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-cream/10 hover:bg-mustard/20 flex items-center justify-center text-cream hover:text-mustard transition-all">
+                                    <a href="https://www.facebook.com/TheGlowonwheel/" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-primary-foreground/10 hover:bg-secondary/20 flex items-center justify-center text-primary-foreground hover:text-secondary transition-all">
                                         <Facebook size={20} />
                                     </a>
                                     <a
@@ -102,7 +102,7 @@ export function Layout({ cart, addToCart }: LayoutProps) {
                                             <path d="M16.01 2.01c-7.73 0-14 6.27-14 14 0 2.47.64 4.83 1.87 6.93L2 30l7.26-1.9A13.93 13.93 0 0016 30c7.73 0 14-6.27 14-14s-6.27-14-14-14zm0 25.27c-2.23 0-4.4-.59-6.31-1.71l-.45-.27-4.31 1.13 1.15-4.21-.29-.45A11.29 11.29 0 014.7 16c0-6.25 5.06-11.31 11.31-11.31S27.31 9.75 27.31 16 22.25 27.28 16 27.28zm6.31-8.42c-.34-.17-2.03-1-2.35-1.11-.31-.11-.54-.17-.76.17-.23.34-.88 1.11-1.08 1.34-.2.23-.4.26-.74.09-.34-.17-1.43-.53-2.73-1.69-1.01-.9-1.69-2.01-1.89-2.35-.2-.34-.02-.52.15-.69.16-.16.34-.4.51-.6.17-.2.23-.34.34-.57.11-.23.06-.43-.03-.6-.09-.17-.76-1.83-1.04-2.52-.27-.65-.55-.56-.76-.57l-.65-.01c-.23 0-.6.09-.91.44s-1.19 1.16-1.19 2.83 1.22 3.28 1.39 3.5c.17.23 2.41 3.68 5.84 5.02.82.35 1.46.56 1.96.71.82.26 1.56.22 2.14.13.65-.1 2.03-.83 2.32-1.63.29-.8.29-1.49.2-1.63-.09-.14-.31-.23-.65-.4z" />
                                         </svg>
                                     </a>
-                                    <a href="https://linktr.ee/Theglowonwheel" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-cream/10 hover:bg-mustard/20 flex items-center justify-center text-cream hover:text-mustard transition-all">
+                                    <a href="https://linktr.ee/Theglowonwheel" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-primary-foreground/10 hover:bg-secondary/20 flex items-center justify-center text-primary-foreground hover:text-secondary transition-all">
                                         <ExternalLink size={20} />
                                     </a>
                                 </div>
@@ -110,30 +110,30 @@ export function Layout({ cart, addToCart }: LayoutProps) {
                         </div>
 
                         <div>
-                            <h4 className="font-bold text-lg mb-3 text-mustard">Quick Links</h4>
+                            <h4 className="font-bold text-lg mb-3 text-secondary">Quick Links</h4>
                             <ul className="space-y-2 text-sm">
-                                <li><Link to="/" className="hover:text-mustard">Home</Link></li>
-                                <li><Link to="/services" className="hover:text-mustard">Services</Link></li>
-                                <li><Link to="/faq" className="hover:text-mustard">FAQ</Link></li>
+                                <li><Link to="/" className="hover:text-secondary">Home</Link></li>
+                                <li><Link to="/services" className="hover:text-secondary">Services</Link></li>
+                                <li><Link to="/faq" className="hover:text-secondary">FAQ</Link></li>
                             </ul>
                         </div>
 
                         <div>
-                            <h4 className="font-bold text-lg mb-3 text-mustard">Contact</h4>
+                            <h4 className="font-bold text-lg mb-3 text-secondary">Contact</h4>
                             <p className="text-sm mb-1">Mon - Sun: 9:00 AM - 9:00 PM</p>
-                            <a href={`tel:${BUSINESS_PHONE}`} className="text-sm mb-1 block hover:text-mustard">+91 84370 85459</a>
+                            <a href={`tel:${BUSINESS_PHONE}`} className="text-sm mb-1 block hover:text-secondary">+91 84370 85459</a>
                             <p className="text-sm">Mohali, Punjab</p>
                         </div>
 
                         <div>
-                            <h4 className="font-bold text-lg mb-3 text-mustard">Legal</h4>
+                            <h4 className="font-bold text-lg mb-3 text-secondary">Legal</h4>
                             <ul className="space-y-2 text-sm">
-                                <li><Link to="/privacy" className="hover:text-mustard">Privacy Policy</Link></li>
-                                <li><Link to="/terms" className="hover:text-mustard">Terms of Service</Link></li>
+                                <li><Link to="/privacy" className="hover:text-secondary">Privacy Policy</Link></li>
+                                <li><Link to="/terms" className="hover:text-secondary">Terms of Service</Link></li>
                             </ul>
                         </div>
                     </div>
-                    <div className="mt-8 pt-8 border-t border-olive/30 text-center text-xs text-cream/60">
+                    <div className="mt-8 pt-8 border-t border-primary-foreground/30 text-center text-xs text-primary-foreground/60">
                         © {new Date().getFullYear()} Glow on Wheel. All rights reserved.
                     </div>
                 </div>

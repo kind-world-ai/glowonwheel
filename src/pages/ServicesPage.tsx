@@ -48,7 +48,7 @@ export function ServicesPage() {
                                             <CardDescription className="text-xs">{service.desc}</CardDescription>
                                         </div>
                                         <div className="text-right flex flex-col items-end gap-1">
-                                            <div className="font-bold text-amber-500 text-base">₹{service.price}</div>
+                                            <div className="font-bold text-secondary text-base">₹{service.price}</div>
                                             <Button
                                                 onClick={() => handleBook(service.name)}
                                                 size="sm"

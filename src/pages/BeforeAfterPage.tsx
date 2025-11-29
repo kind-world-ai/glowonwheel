@@ -62,7 +62,7 @@ export function BeforeAfterPage() {
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                     >
-                        <Badge className="bg-mustard text-olive-dark hover:bg-mustard/90 mb-4 px-4 py-1">
+                        <Badge className="bg-secondary text-secondary-foreground hover:bg-secondary/90 mb-4 px-4 py-1">
                             <Sparkles size={14} className="mr-1" />
                             TRANSFORMATION GALLERY
                         </Badge>

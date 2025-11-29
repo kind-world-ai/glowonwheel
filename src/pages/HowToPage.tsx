@@ -39,7 +39,7 @@ export function HowToPage() {
                 path="/howto"
             />
             <h1 className="font-bold text-2xl text-foreground mb-6 flex items-center gap-2">
-                <Sparkles className="text-amber-500" />
+                <Sparkles className="text-secondary" />
                 Beauty Tips
             </h1>
 
@@ -59,7 +59,7 @@ export function HowToPage() {
                                 {tip.steps.map((step, sIdx) => (
                                     <li key={sIdx} className="flex items-start gap-3 text-sm text-muted-foreground">
                                         <div className="mt-0.5 min-w-[16px]">
-                                            <Check size={16} className="text-green-500" />
+                                            <Check size={16} className="text-primary" />
                                         </div>
                                         {step}
                                     </li>
@@ -74,7 +74,7 @@ export function HowToPage() {
                 <p className="text-muted-foreground text-sm mb-2">Want to learn more?</p>
                 <Button
                     variant="link"
-                    className="text-amber-500 hover:text-amber-600"
+                    className="text-secondary hover:text-secondary/80"
                     onClick={() => openWhatsApp('Hi! I have a beauty question.')}
                 >
                     Ask on WhatsApp
